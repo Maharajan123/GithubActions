@@ -1,1 +1,11 @@
+name: HI
+on: push
+
+jobs:
+  hi_file:
+    runs-on: windows-latest
+
+    steps:
+    - name : Print some message
+      run : echo "Hi This is Action"
 
