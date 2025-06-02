@@ -1,0 +1,18 @@
+name: Run a python file
+on : push
+
+jobs :
+    Job-1:
+        runs-on : windows-latest
+
+        steps:
+        - name: clonerepo
+          uses: actions/checkout@v3
+
+        - name : setup_python
+          uses : actions/setup-python@v4
+          with :
+            python-version: '3.10'
+
+        - name : Run the file
+          run : python hello.py
